@@ -7,13 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700">
     
     <style>
+      @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
         html,
 body,
 .wrap {
   width: 100%;
   height: 100%;
+  font-family:  'Roboto Slab', serif;
 }
 body {
   overflow: hidden;
@@ -26,6 +31,7 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
 }
 #me {
   position: absolute;
@@ -35,6 +41,35 @@ canvas {
   max-height: 656px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+          display: flex;
+    align-items: center;
+    color: #fff;
+    z-index: 2;
+  font-size: 4rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Quicksand;
+}
+#me:hover
+ {
+  -webkit-animation: MISSION-HOVER 1.5s infinite;
+  -moz-animation: MISSION-HOVER 1.5s infinite;
+  -o-animation: MISSION-HOVER 1.5s infinite;
+  animation: MISSION-HOVER 1.5s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+
+}
+@-webkit-keyframes MISSION-HOVER {
+  0%, 100% {
+    font-size: 4rem;
+    color: white;
+  }
+  50% {
+    color: #BFFCFF;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 30px #bffcff;
+  }
 }
 #container {
   position: absolute;
@@ -282,7 +317,7 @@ a:focus:before {
 
     </style>
 <div class="wrap">
-    <canvas id="nodes"></canvas>
+    <canvas id="nodes"></canvas> <div id="me">Comming Soon !</div>
     <div id="container">
       <div id="social">
         <div><a target="_blank" href="mailto:anasedreesi@gmail.com" title="anasedreesi@gmail.com">anasedreesi@gmail.com</a></div>
